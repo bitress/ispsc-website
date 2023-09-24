@@ -30,8 +30,22 @@ hr {
 nav {
   display: flex;
   justify-content: flex-end;
-  background-color: var(--maroon); /* Background color */
-  padding: 10px 0; /* Add padding for spacing */
+  background-color: var(--maroon);
+  padding: 10px; 
+  margin-top: 20px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--yellow);
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+.hamburger-menu {
+  display: none; 
+  cursor: pointer;
 }
 
 nav li {
@@ -44,14 +58,22 @@ nav li {
 
 nav li:hover {
   background-color: var(--dark-maroon);
-  color: white; 
+  color: white;
+
 }
 
+nav a {
+  text-decoration: none;
+  color: var(--yellow);
+}
 
+nav a:hover {
+  color: white;
+}
 
 .masthead {
   display: block;
-  background-color: var(--maroon);
+  background-color: var(--dark-maroon);
   padding: 20px;
   
 }
@@ -313,12 +335,22 @@ input:checked + .slide-container .nav label { display: block; }
 
   nav {
     flex-direction: column; /* Stack menu items vertically */
-    text-align: center; /* Center-align menu items */
+    /* text-align: center; */
   }
 
-  nav li {
+  nav ul {
     display: none; 
     padding: 10px 0; 
+  }
+
+  
+
+  .navbar-toggled {
+    display: block;
+  }
+
+  .navbar-toggled li {
+    display: block;
   }
 
 
@@ -335,6 +367,10 @@ input:checked + .slide-container .nav label { display: block; }
   #pst-container {
     display: none;
   }
+
+  .hamburger-menu {
+    display: block; 
+}
 
 }
 

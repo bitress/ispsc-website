@@ -1,7 +1,27 @@
 var bitress = {
-    Utils : {}
+    Utils : {},
+    Http: {}
 }
 
+
+
+bitress.Http.get = function () {
+    
+}
+
+
+bitress.Utils.fetchAnnouncements = function() {
+
+}
+
+bitress.Utils.toggleNav = function () {
+    const hamburger = document.querySelector("#hamburger");
+    const navList = document.querySelector(".nav-link");
+
+    hamburger.addEventListener("click", function () {
+        navList.classList.toggle("navbar-toggled")
+    });
+}
 
 bitress.Utils.clock = function ()
 {
@@ -40,3 +60,7 @@ bitress.Utils.clock = function ()
 
 bitress.Utils.clock();
 setInterval(bitress.Utils.clock, 1000)
+
+document.addEventListener("DOMContentLoaded", function () {
+    bitress.Utils.toggleNav();
+});
