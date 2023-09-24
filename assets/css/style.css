@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
+
+:root{
+    --primary: #007BFF;
+    --dark-maroon: #700000;
+    --maroon: #800000;
+    --yellow: #FFD700;
+    --green: #008000;
+    --dark-green: #006600;
+
+    
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
+hr {
+    border: 2px solid orange;
+    margin: 25px;
+}
+
+/* Navbar Styles */
+nav {
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--maroon); /* Background color */
+  padding: 10px 0; /* Add padding for spacing */
+}
+
+nav li {
+  display: inline-block;
+  padding: 10px 20px; 
+  color: var(--yellow); 
+  text-decoration: none; 
+  transition: background-color 0.3s ease; 
+}
+
+nav li:hover {
+  background-color: var(--dark-maroon);
+  color: white; 
+}
+
+
+
+.masthead {
+  display: block;
+  background-color: var(--maroon);
+  padding: 20px;
+  
+}
+
+.logo {
+    display: flex;
+    /* justify-content: space-evenly; */
+}
+
+
+.text-logo {
+  font-family: 'Cinzel';
+  display: inline-block;
+  margin-top: 12px;
+}
+
+.image-logo {
+  margin-right: 20px;
+}
+
+.image-logo > .logo{
+  width: 120px;
+}
+
+#agency-heading {
+    font-size: 12pt;
+    color: var(--yellow);
+}
+
+#agency-name {
+    font-size: 30px;
+    display: block;
+    position: relative;
+    color: var(--yellow);
+    line-height: 1;
+    padding-top: 5px;
+    border-top: 1px solid var(--yellow);
+    margin: 0;
+}
+
+#agency-tagline {
+    font-size: 12pt;
+    color: var(--yellow);
+}
+
+
+/* Style the Philippine Standard Time */
+#pst-container {
+  float: right;
+  font-size: 14px;
+  margin-top: 20px; 
+  color: var(--yellow); 
+}
+
+#pst-time a {
+  text-decoration: none;
+  color: var(--yellow); 
+}
+
+
+
+.carousel {
+  margin: 0 auto;
+
+}
+
+
+ul.slides {
+  display: block;
+  position: relative;
+  height: 600px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style: none;
+}
+
+.slides * {
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+ul.slides input {
+  display: none; 
+}
+
+
+.slide-container { 
+  display: block; 
+  
+}
+
+.slide-image {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0;
+  transition: all .7s ease-in-out;
+}   
+
+.slide-image img {
+  /* width: auto; */
+  min-width: 100%;
+  height: 100%;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  font-size: 100px;
+  line-height: 600px;
+  color: #fff;
+}
+
+.carousel-controls label {
+  display: none;
+  position: absolute;
+  padding: 0 20px;
+  opacity: 0;
+  transition: opacity .2s;
+  cursor: pointer;
+}
+
+.slide-image:hover + .carousel-controls label{
+  opacity: 0.5;
+}
+
+.carousel-controls label:hover {
+  opacity: 1;
+}
+
+.carousel-controls .prev-slide {
+  width: 49%;
+  text-align: left;
+  left: 0;
+}
+
+.carousel-controls .next-slide {
+  width: 49%;
+  text-align: right;
+  right: 0;
+}
+
+.carousel-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  z-index: 999;
+  text-align: center;
+}
+
+.carousel-dots .carousel-dot {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.5;
+  margin: 10px;
+}
+
+input:checked + .slide-container .slide-image {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .carousel-controls label {
+   display: block; 
+}
+
+input#img-1:checked ~ .carousel-dots label#img-dot-1,
+input#img-2:checked ~ .carousel-dots label#img-dot-2,
+input#img-3:checked ~ .carousel-dots label#img-dot-3,
+input#img-4:checked ~ .carousel-dots label#img-dot-4,
+input#img-5:checked ~ .carousel-dots label#img-dot-5,
+input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+opacity: 1;
+}
+
+
+input:checked + .slide-container .nav label { display: block; }
+ 
+.heading {
+  margin: 0;
+  padding-left: 100px;
+  color: yellow;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.heading h3 {
+  font-size: 36px;
+  line-height: 60px;
+  background-color: #800000;
+  border-radius: 25px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+
+.mission,
+.vision {
+    background-color: yellow;
+    border-radius: 20px;
+    padding: 20px;
+    color: #800000;
+}
+
+
+/* Grid System because they don't want us to use CSS Framework */
+
+.container {
+  max-width: 1200px; /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 0 15px; /* Add optional padding to the container's sides */
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+
+/* For desktop: */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-1 {flex: 0 0 8.33%;}
+.col-2 {flex: 0 0 16.66%;}
+.col-3 {flex: 0 0 25%;}
+.col-4 {flex: 0 0 33.33%;}
+.col-5 {flex: 0 0 41.66%;}
+.col-6 {flex: 0 0 50%;}
+.col-7 {flex: 0 0 58.33%;}
+.col-8 {flex: 0 0 66.66%;}
+.col-9 {flex: 0 0 75%;}
+.col-10 {flex: 0 0 83.33%;}
+.col-11 {flex: 0 0 91.66%;}
+.col-12 {flex: 0 0 100%;}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .row {
+    flex-direction: column;
+  }
+
+  [class*="col-"] {
+    width: 100%;
+    flex: 0 0 100%;
+  }
+
+  nav {
+    flex-direction: column; /* Stack menu items vertically */
+    text-align: center; /* Center-align menu items */
+  }
+
+  nav li {
+    display: none; 
+    padding: 10px 0; 
+  }
+
+
+  .logo {
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+
+ .image-logo > .logo{
+    width: 100px;
+  }
+
+  #pst-container {
+    display: none;
+  }
+
+}
+
