@@ -58,8 +58,8 @@ nav li {
 
 nav li:hover {
   background-color: var(--dark-maroon);
+  padding: 10px 20px;
   color: white;
-
 }
 
 nav a {
@@ -71,11 +71,46 @@ nav a:hover {
   color: white;
 }
 
+nav ul.sub-menu {
+  display: none; 
+  position: absolute;
+  background-color: var(--maroon);
+  list-style-type: none;
+  padding: 0;
+  z-index: 1000;
+  margin: 0;
+}
+
+nav li:hover ul.sub-menu {
+  display: block; 
+}
+
+nav ul.sub-menu li {
+  display: block;
+  padding: 10px 20px;
+  color: var(--yellow);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+nav ul.sub-menu li:hover {
+  background-color: var(--dark-maroon);
+  padding: 10px 20px;
+  color: white;
+}
+
+
 .masthead {
   display: block;
-  background-color: var(--dark-maroon);
-  padding: 20px;
-  
+  background-color: var(--dark-maroon);  
+}
+
+
+.header-masthead {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+
 }
 
 .logo {
@@ -95,7 +130,7 @@ nav a:hover {
 }
 
 .image-logo > .logo{
-  width: 120px;
+  width: 100px;
 }
 
 #agency-heading {
@@ -267,30 +302,30 @@ opacity: 1;
 
 input:checked + .slide-container .nav label { display: block; }
  
-.heading {
-  margin: 0;
-  padding-left: 100px;
-  color: yellow;
-  text-align: center;
-  text-transform: uppercase;
+
+.section {
+  margin-top: 20px;
 }
 
-.heading h3 {
-  font-size: 36px;
-  line-height: 60px;
-  background-color: #800000;
-  border-radius: 25px;
-  margin-bottom: 10px;
-  margin-top: 10px;
+.card {
+  background-color: white; /* Set a white background for cards */
+  border: 1px solid #ddd; /* Add a border for separation between cards */
+  padding: 15px; /* Add padding for spacing inside cards */
+  margin-bottom: 15px; /* Add margin between stacked cards */
+  width: 100%; /* Make cards take full width */
 }
 
+/* Style for the h3 elements inside .card */
+.card h3 {
+  font-size: 16px;
+  background-color: maroon; /* Add maroon background color */
+  color: white; /* Set text color to white for better visibility */
+  padding: 8px; /* Add padding for spacing */
+  margin: 0; /* Remove default margin */
+}
 
-.mission,
-.vision {
-    background-color: yellow;
-    border-radius: 20px;
-    padding: 20px;
-    color: #800000;
+.card li {
+  list-style-type: none;
 }
 
 
