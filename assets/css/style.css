@@ -329,6 +329,12 @@ input:checked + .slide-container .nav label { display: block; }
 }
 
 
+#announcements li{
+  font-size: 14px;
+  border-bottom: 1px solid var(--dark-maroon);
+  margin-right: 50px;
+}
+
 .card ul {
   margin-top: 20px;
 }
@@ -348,25 +354,120 @@ input:checked + .slide-container .nav label { display: block; }
   color: var(--yellow);
 }
 
+.hero {
+  padding: 16px !important;
+  margin: 20px !important;
+}
+.hero-content {
+  display: flex;
+  padding: 20px;
+  background-color: var(--maroon);
+}
+
+.hero-content p {
+  padding-left: 16px;
+  text-align: justify;
+  color: white;
+}
+
+.hero h3 {
+  font-family: 'Century Gothic';
+  font-size: 24px;
+  margin: 20px;
+  text-transform: uppercase;
+} 
 
 
 .footer {
   margin-top: 50px;
   background-color: var(--maroon);
   width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 40px;
 }
 
-.footer marquee{
+
+.footer-logo {
+  display: flex;
+  margin-bottom: 20px;
+
+}
+
+
+.footer-logo .footer-logo-image {
+  width: 120px;
+}
+
+
+.footer-links h4 {
+  font-family: 'Century Gothic';
+  color: white;
+  font-size: 18px;
+}
+
+
+.footer-links  a{
+  text-decoration: none;
+  color: var(--yellow);
+  font-family: 'Century Gothic';
+
+}
+
+.footer-links li {
+  list-style-type: none;
+}
+
+.footer-contact h4 {
+  font-family: 'Century Gothic';
+  color: white;
+  font-size: 18px;
+
+}
+
+
+.footer-contact  p{
+  text-decoration: none;
+  color: var(--yellow);
+  font-family: 'Century Gothic';
+
+}
+
+.footer-contact li {
+  list-style-type: none;
+}
+
+
+.copyright {
+  font-family: 'Century Gothic';
+  border-top: 3px solid var(--dark-green);
+  text-align: center;
+  padding-top: 20px;
+  font-size: 18px;
+  color: white;
+}
+
+.marquee-container {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  /* z-index: 100;  */
+}
+
+
+.marquee-container marquee{
   position: relative;
-  padding: 40px;
   color: #d3475b;
   opacity: .3;
-  font-size: 160px;
+  font-size: 150px;
   font-weight: 500;
   letter-spacing: 0px;
   top: 0px;
   bottom: auto ;
 }
+
+
 
 
 /* Grid System because they don't want us to use CSS Framework */
@@ -418,6 +519,11 @@ input:checked + .slide-container .nav label { display: block; }
     padding: 10px 0; 
   }
 
+  .slide-image {
+    height: 100%;
+    width: 100%;
+
+  }
   
 
   .navbar-toggled {
@@ -435,6 +541,12 @@ input:checked + .slide-container .nav label { display: block; }
     text-align: center;
   }
 
+  .footer-logo {
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+
  .image-logo > .logo{
     width: 100px;
   }
@@ -445,7 +557,36 @@ input:checked + .slide-container .nav label { display: block; }
 
   .hamburger-menu {
     display: block; 
-}
+  }
+
+  .footer-logo .footer-logo-image {
+    width: 70px;
+  }
+  
+
+  .marquee-container marquee{
+    position: relative;
+    color: #d3475b;
+    opacity: .3;
+    font-size: 70px;
+    font-weight: 500;
+    letter-spacing: 0px;
+    top: 0px;
+    bottom: auto ;
+  }
+
+  .copyright {
+    font-size: 16px;
+  }
+
+  .hero-content {
+    display: block;
+    padding: 20px;
+  }
+
+  #ssc-fb {
+    display: none;
+  }
 
 }
 

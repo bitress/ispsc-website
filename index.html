@@ -3,7 +3,12 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="author" content="Cyanne Justin Vega">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
   <title>Home | ISPSC Tagudin</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet"
@@ -94,7 +99,7 @@
               <img src="assets/img/banner/3-Story Building-LHS.jpg">
             </div>
             <div class="carousel-controls">
-              <label for="img-3" class="prev-slide">
+              <label for="img-1" class="prev-slide">
                 <span>&lsaquo;</span>
               </label>
               <label for="img-2" class="next-slide">
@@ -105,21 +110,7 @@
           <input type="radio" name="radio-buttons" id="img-2" />
           <li class="slide-container">
             <div class="slide-image">
-              <img src="assets/img/banner/7-Story Building.jpg">
-            </div>
-            <div class="carousel-controls">
-              <label for="img-1" class="prev-slide">
-                <span>&lsaquo;</span>
-              </label>
-              <label for="img-3" class="next-slide">
-                <span>&rsaquo;</span>
-              </label>
-            </div>
-          </li>
-          <input type="radio" name="radio-buttons" id="img-3" />
-          <li class="slide-container">
-            <div class="slide-image">
-              <img src="https://speakzeasy.files.wordpress.com/2015/05/twa_blogpic_timisoara-4415.jpg">
+              <img src="assets/img/banner/1.jpg">
             </div>
             <div class="carousel-controls">
               <label for="img-2" class="prev-slide">
@@ -130,10 +121,10 @@
               </label>
             </div>
           </li>
+        
           <div class="carousel-dots">
             <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
             <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
-            <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
           </div>
         </ul>
       </div>
@@ -145,12 +136,11 @@
   <div class="container">
     <div class="row">
 
-      <div class="col-3">
+      <div class="col-4">
         <div class="section">
           <div class="card">
             <h3>Announcements</h3>
-            <ul>
-              <li>No Announcements Yet</li>
+            <ul id="announcements">
             </ul>
           </div>
 
@@ -165,7 +155,7 @@
           </div>
 
 
-          <div class="card">
+          <div class="card" id="ssc-fb">
             <h3>Ammuyo: SSC FB Page</h3>
             <div class="fb-page" data-href="https://www.facebook.com/ssctagudin" data-tabs="timeline" data-width="500"
               data-adapt-container-width="true" data-height="" data-small-header="false"
@@ -178,35 +168,64 @@
         </div>
       </div>
 
-      <div class="col-6">
-        <div class="container">
+      <div class="col-8">
+          <div class="container hero">
+            <h3>Welcome to <span>Ilocos Sur Polytechnic State College</span></h3>
+            <div class="hero-content">
+              <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fssctagudin%2Fvideos%2F1366186200979346%2F&show_text=false&width=560&t=0"  style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+              <p>ISPSC is a comprehensive six-campus institution of higher learning mandated to give professional and technical training both in the undergraduate and graduate levels in the fields of economics, agriculture, fishery, trade, home industry, engineering, education, forest research a ...</p>
+            </div>      
+          </div>
+
+          <div class="container"></div>
 
         </div>
-      </div>
-
-
-      <div class="col-3">
-
-      </div>
-
     </div>
   </div>
 
 
-
   <footer class="footer">
-    <marquee width="100%" behavior="right" scrollamount="10">Imagine studying at ISPSC</marquee>
-
-    <div class="container">
+   
+  
+    <div class="row">
       <div class="col-4">
-      <img src="assets/img/ispsc_logo.png" alt="ISPSC Logo">
-      <p>&copy; 2023 Ilocos Sur Polytechnic State College <br> Tagudin Campus</p>
+        <div class="footer-logo">
+          <img src="assets/img/ispsc_logo.png" class="footer-logo-image" alt="ISPSC Logo">
+        </div>
+      </div>
+  
+      <div class="col-4">
+        <div class="footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Programs</a></li>
+            <li><a href="#">Admissions</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+  
+      <div class="col-4">
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p>Email: info@ispsc.edu</p>
+          <p>Phone: +1 (123) 456-7890</p>
+          <p>Address: Quirino, Tagudin, Ilocos Sur</p>
+        </div>
       </div>
     </div>
 
 
-
+    <!-- <div class="marquee-container">
+      <marquee width="100%" behavior="right" scrollamount="10">Imagine studying at ISPSC</marquee>
+    </div> -->
+  
+    <div class="copyright">
+      &copy; 2023 Ilocos Sur Polytechnic State College
+    </div>
   </footer>
+  
 
 
 

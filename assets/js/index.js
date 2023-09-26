@@ -5,12 +5,28 @@ var bitress = {
 
 
 
-bitress.Http.get = function () {
-    
-}
 
 
 bitress.Utils.fetchAnnouncements = function() {
+    fetch('http://172.245.135.51/api.php')
+  .then(response => {  
+    return response.json(); 
+  })
+  .then(data => {
+      const announcements = data;
+
+      announcements.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+      const latestAnnouncements = announcements.slice(0, 2);
+      var placeholder = document.getElementById("announcements");
+      latestAnnouncements.forEach(e => {
+        placeholder.innerHTML += `<li>${e.date}: ${e.content}  </li>`
+    });
+
+  })
+  .catch(error => {
+    console.error('There was a problem with the fetch operation:', error);
+  });
 
 }
 
@@ -60,6 +76,7 @@ bitress.Utils.clock = function ()
 
 bitress.Utils.clock();
 setInterval(bitress.Utils.clock, 1000)
+bitress.Utils.fetchAnnouncements();
 
 document.addEventListener("DOMContentLoaded", function () {
     bitress.Utils.toggleNav();
