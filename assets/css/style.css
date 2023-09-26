@@ -467,6 +467,12 @@ input:checked + .slide-container .nav label { display: block; }
   bottom: auto ;
 }
 
+.footer-logo p {
+  color: white;
+  margin-top: 25px;
+  font-family: 'Century Gothic';
+}
+
 
 
 
