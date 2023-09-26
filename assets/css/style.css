@@ -553,6 +553,20 @@ input:checked + .slide-container .nav label { display: block; }
 }
 
 
+.hero p {
+  text-align: justify;
+  margin: 0;
+}
+
+.mission-and-vision {
+  padding: 20px;
+}
+
+.mission-and-vision > .card h3 {
+/*  */
+}
+
+
 /* Grid System because they don't want us to use CSS Framework */
 
 .container {
