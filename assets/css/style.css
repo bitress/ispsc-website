@@ -69,6 +69,12 @@ nav a {
   color: var(--yellow);
 }
 
+.active {
+  background-color: var(--dark-maroon);
+  padding: 10px 20px;
+  color: white;
+}
+
 nav a:hover {
   color: white;
 }
@@ -361,8 +367,15 @@ input:checked + .slide-container .nav label { display: block; }
 .hero-content {
   display: flex;
   padding: 20px;
+  flex-direction: row;
   background-color: var(--maroon);
 }
+
+.hero-content .iframe_video {
+  max-width: 50%;
+  margin-right: 20px; 
+}
+
 
 .hero-content p {
   padding-left: 16px;
@@ -470,10 +483,74 @@ input:checked + .slide-container .nav label { display: block; }
 .footer-logo p {
   color: white;
   margin-top: 25px;
-  font-family: 'Century Gothic';
+  font-family: 'Century Gothic', serif;
 }
 
+.accordion {
+  max-width: 600px; /* Adjust the maximum width as needed */
+  margin: 0 auto;
+}
 
+.accordion-item {
+  border: 1px solid #ddd;
+  margin: 5px 0;
+}
+
+.accordion-header {
+  background-color: var(--maroon);
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  color: var(--yellow);
+}
+
+.accordion-header:hover {
+  background-color: var(--dark-maroon);
+}
+
+.accordion-content {
+  padding: 10px;
+  display: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.accordion-header::after {
+  content: "+";
+  font-size: 20px;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+.accordion.active .accordion-header::after {
+  transform: rotate(45deg);
+}
+
+.accordion-content li, p{
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: var(--dark-maroon);
+  margin-right: 50px;
+  list-style-type: none;
+}
+
+.accordion-content a {
+  text-decoration: none;
+  color: var(--dark-maroon);
+  transition: color 0.3s ease;
+}
+
+.accordion-content a:hover {
+  color: var(--yellow);
+}
+
+.hero img {
+  width: 100%;
+}
 
 
 /* Grid System because they don't want us to use CSS Framework */
@@ -593,6 +670,10 @@ input:checked + .slide-container .nav label { display: block; }
   #ssc-fb {
     display: none;
   }
+
+  .accordion {
+    max-width: 100%;
+}
 
 }
 

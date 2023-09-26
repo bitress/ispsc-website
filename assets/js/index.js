@@ -74,6 +74,18 @@ bitress.Utils.clock = function ()
 }
 
 
+const accordionItems = document.querySelectorAll('.accordion-item');
+accordionItems.forEach(item => {
+    const header = item.querySelector('.accordion-header');
+    const content = item.querySelector('.accordion-content');
+
+    header.addEventListener('click', () => {
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    });
+});
+
+
+
 bitress.Utils.clock();
 setInterval(bitress.Utils.clock, 1000)
 bitress.Utils.fetchAnnouncements();
