@@ -9,8 +9,6 @@
     --yellow: #FFD700;
     --green: #008000;
     --dark-green: #006600;
-
-    
 }
 
 * {
@@ -19,7 +17,7 @@
 }
 
 html {
-    font-family: 'Poppins', sans-serif;
+  font-family: 'Century Gothic', sans-serif;
 }
 
 hr {
@@ -311,6 +309,49 @@ opacity: 1;
 
 input:checked + .slide-container .nav label { display: block; }
  
+.blog {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+.blog h4 {
+  font-family: 'Century Gothic';
+  margin-bottom: 20px;
+}
+
+.blog a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.blog-image {
+  max-width: 30%;
+  display: block;
+}
+
+
+.inline-content {
+  display: flex;
+  align-items: start;
+}
+
+.inline-content .blog-image {
+  max-width: 120px; 
+  margin-right: 10px; 
+}
+
+
+.blog-content p{
+  font-family: 'Century Gothic', sans-serif;
+  font-size: 14px;
+  text-align: justify;
+  color: #333;
+  margin-right: 200px;
+}
 
 .section {
   margin-top: 20px;
@@ -389,6 +430,12 @@ input:checked + .slide-container .nav label { display: block; }
   margin: 20px;
   text-transform: uppercase;
 } 
+
+
+.brief_history {
+  font-size: 16px;
+  font-family: 'Century Gothic';
+}
 
 .lyrics p{
   text-align: center;
@@ -550,7 +597,7 @@ input:checked + .slide-container .nav label { display: block; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Century Gothic', sans-serif;
   font-weight: 500;
   transition: background-color 0.3s ease;
   color: var(--yellow);
@@ -563,7 +610,7 @@ input:checked + .slide-container .nav label { display: block; }
 .accordion-content {
   padding: 10px;
   display: none;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Century Gothic', sans-serif;
 }
 
 .accordion-header::after {
@@ -578,8 +625,8 @@ input:checked + .slide-container .nav label { display: block; }
 }
 
 .accordion-content li, p{
-  font-family: 'Poppins', sans-serif;
-  font-size: 16px;
+  font-family: 'Century Gothic', sans-serif;
+  font-size: 14px;
   color: var(--dark-maroon);
   margin-right: 50px;
   list-style-type: none;
@@ -776,7 +823,15 @@ ol li{
 
   .accordion {
     max-width: 100%;
-}
+  }
+
+  
+    .inline-content  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
 
 }
 
