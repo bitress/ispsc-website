@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 @import url('fonts/CenturyGothic/font.css');
 
 :root{
@@ -502,6 +503,7 @@ input:checked + .slide-container .nav label { display: block; }
   position: relative;
   overflow: hidden;
   padding: 40px;
+  z-index: 0;
 }
 
 
@@ -559,19 +561,36 @@ input:checked + .slide-container .nav label { display: block; }
 }
 
 .marquee-container {
+    pointer-events: none;
   position: absolute;
   width: 100%;
   top: 0;
   left: 0;
-  /* z-index: 100;  */
+  z-index: -1; 
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.marquee-container {
+  overflow: hidden;
+}
+
+.marquee-container div {
+  white-space: nowrap;
+  animation: marquee 10s linear infinite;
 }
 
 
+
 .marquee-container marquee{
+  font-family: 'Roboto', sans-serif;
   position: relative;
   color: #d3475b;
   opacity: .3;
-  font-size: 150px;
+  font-size: 160px;
   font-weight: 500;
   letter-spacing: 0px;
   top: 0px;
@@ -861,6 +880,14 @@ ol li{
     width: 120px !important;
     padding: 16px;
   }
+
+
+
+
+.marquee-container marquee{
+  font-size: 250px;
+
+}
 
 
 

@@ -6,6 +6,20 @@ var bitress = {
     Http: {}
 };
 
+bitress.Utils.marqueeChange = function (){
+    var textOptions = [
+        "The road to success and the road to failure are almost exactly the same.",
+        "The only thing that overcomes hard luck is hard work.",
+        "Success is not just about making money. It's about making a difference.",
+        "The future belongs to those who believe in the beauty of their dreams.",
+      ];
+      
+    var marquee = document.getElementById("footer-marquee");
+    var randomIndex = Math.floor(Math.random() * textOptions.length);
+    marquee.textContent = textOptions[randomIndex];
+      
+}
+
 bitress.Utils.fetchAnnouncements = function () {
     fetch(bitress.URI.announcement_api)
         .then(response => {
@@ -81,6 +95,7 @@ bitress.Utils.fetchAnnouncements();
 
 document.addEventListener("DOMContentLoaded", function () {
     bitress.Utils.toggleNav();
+    bitress.Utils.marqueeChange();
 });
 
 
