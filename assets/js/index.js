@@ -1,3 +1,6 @@
+/**
+ * Copyright (c) 2023 Cyanne Justin Vega
+*/
 var bitress = {
     URI: {
         announcement_api: "https://istaronline.org/api.php"
@@ -113,3 +116,5 @@ function nextSlide() {
 }
 
 setInterval(nextSlide, 5000);
+
+console.log("Made with <3 by Cyanne Justin Vega");
