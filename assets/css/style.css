@@ -1,3 +1,6 @@
+/**
+ * Copyright (c) 2023 Cyanne Justin Vega
+*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
@@ -5,9 +8,9 @@
 
 :root{
     --maroon: #700000;
-    --dark-maroon: #006600;
-    --maroon-accent: #800000;
-    --yellow: #FFD700;
+    --dark-maroon: #198754;
+    --maroon-accent: #842029;
+    --yellow: #ffc107;
     --green: #008000;
     --dark-green: #006600;
 }
@@ -371,9 +374,9 @@ input:checked + .slide-container .nav label { display: block; }
 
 #announcements li{
   font-size: 14px;
-  border-bottom: 1px solid var(-maroon);
+  border-bottom: 1px solid var(--yellow);
   margin-right: 50px;
-  color: var(--dark-maroon);
+  color: var(--maroon-accent);
 }
 
 .card ul {
@@ -388,11 +391,12 @@ input:checked + .slide-container .nav label { display: block; }
 .card li a {
   font-size: 16px;
   text-decoration: none;
-  color: var(--dark-maroon);
+  color: var(--maroon-accent);
 }
 
 .card li a:hover {
-  color: var(--maroon-accent);
+  color: var(--maroon);
+  font-weight: bold;
 }
 
 .hero {
@@ -439,6 +443,7 @@ input:checked + .slide-container .nav label { display: block; }
 .lyrics p{
   text-align: center;
   font-family: 'Century Gothic';
+  color: var(--maroon-accent);
 }
 
 .lyrics h2 {
@@ -615,7 +620,7 @@ input:checked + .slide-container .nav label { display: block; }
 }
 
 .accordion-header:hover {
-  background-color: var(--dark-maroon);
+  background-color: var(--maroon-accent);
 }
 
 .accordion-content {
@@ -637,8 +642,8 @@ input:checked + .slide-container .nav label { display: block; }
 
 .accordion-content li, p{
   font-family: 'Century Gothic', sans-serif;
-  font-size: 14px;
-  color: var(--dark-maroon);
+  font-size: 16px;
+  color: var(--maroon-accent);
   margin-right: 50px;
   list-style-type: none;
 }
@@ -649,7 +654,7 @@ input:checked + .slide-container .nav label { display: block; }
   transition: color 0.3s ease;
 }
 
-.accordion-content a:hover {
+.accordion-content a:hover{
   color: var(--yellow);
 }
 

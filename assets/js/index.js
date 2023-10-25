@@ -1,25 +1,26 @@
 /**
  * Copyright (c) 2023 Cyanne Justin Vega
 */
+const announcementsToDisplay = 2;
 var bitress = {
     URI: {
         announcement_api: "https://istaronline.org/api.php"
     },
+    quotes: [
+            "The road to success and the road to failure are almost exactly the same.",
+            "The only thing that overcomes hard luck is hard work.",
+            "Success is not just about making money. It's about making a difference.",
+            "The future belongs to those who believe in the beauty of their dreams.",       
+    ],
     Utils: {},
     Http: {}
 };
 
 bitress.Utils.marqueeChange = function (){
-    var textOptions = [
-        "The road to success and the road to failure are almost exactly the same.",
-        "The only thing that overcomes hard luck is hard work.",
-        "Success is not just about making money. It's about making a difference.",
-        "The future belongs to those who believe in the beauty of their dreams.",
-      ];
       
     var marquee = document.getElementById("footer-marquee");
-    var randomIndex = Math.floor(Math.random() * textOptions.length);
-    marquee.textContent = textOptions[randomIndex];
+    var randomIndex = Math.floor(Math.random() * bitress.quotes.length);
+    marquee.textContent = bitress.quotes[randomIndex];
       
 }
 
@@ -33,7 +34,7 @@ bitress.Utils.fetchAnnouncements = function () {
 
             announcements.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-            const latestAnnouncements = announcements.slice(0, 2);
+            const latestAnnouncements = announcements.slice(0, announcementsToDisplay);
             var placeholder = document.getElementById("announcements");
             latestAnnouncements.forEach(e => {
                 placeholder.innerHTML += `<li>${e.date}: ${e.content}</li>`;
