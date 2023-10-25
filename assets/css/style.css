@@ -4,9 +4,9 @@
 @import url('fonts/CenturyGothic/font.css');
 
 :root{
-    --primary: #007BFF;
-    --dark-maroon: #700000;
-    --maroon: #800000;
+    --maroon: #700000;
+    --dark-maroon: #006600;
+    --maroon-accent: #800000;
     --yellow: #FFD700;
     --green: #008000;
     --dark-green: #006600;
@@ -58,7 +58,7 @@ nav li {
 }
 
 nav li:hover {
-  background-color: var(--dark-maroon);
+  background-color: var(--maroon-accent);
   padding: 10px 20px;
 }
 
@@ -91,7 +91,7 @@ nav ul.sub-menu li {
 }
 
 nav ul.sub-menu li:hover {
-  background-color: var(--dark-maroon);
+  background-color: var(--maroon-accent);
   padding: 10px 20px;
   color: white;
 }
@@ -371,7 +371,7 @@ input:checked + .slide-container .nav label { display: block; }
 
 #announcements li{
   font-size: 14px;
-  border-bottom: 1px solid var(---maroon);
+  border-bottom: 1px solid var(-maroon);
   margin-right: 50px;
   color: var(--dark-maroon);
 }
@@ -392,7 +392,7 @@ input:checked + .slide-container .nav label { display: block; }
 }
 
 .card li a:hover {
-  color: var(--yellow);
+  color: var(--maroon-accent);
 }
 
 .hero {
@@ -681,27 +681,27 @@ input:checked + .slide-container .nav label { display: block; }
 }
 
 .translation-fil {
-  color: var(--green) !important;
+  color: #006600 !important;
 }
 
 .translation-il {
-  color: var(--primary) !important;
+  color: #007BFF !important;
 }
 
 .red {
-  color: var(--dark-maroon) !important;
+  color: #700000 !important;
   font-size: 24px !important;
   font-weight: bold;
 }
 
 .green {
-  color: var(--dark-green) !important;
+  color: #006600 !important;
   font-size: 24px !important;
   font-weight: bold;
 }
 
 .blue {
-  color: var(--primary) !important;
+  color: #007BFF !important;
   font-size: 24px !important;
   font-weight: bold;
 }
