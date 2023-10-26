@@ -4,7 +4,7 @@
 const announcementsToDisplay = 2;
 var bitress = {
     URI: {
-        announcement_api: "https://istaronline.org/api.php"
+        announcement_api: "announcement_api/data.json"
     },
     quotes: [
             "The road to success and the road to failure are almost exactly the same.",
@@ -119,3 +119,9 @@ function nextSlide() {
 setInterval(nextSlide, 5000);
 
 console.log("Made with <3 by Cyanne Justin Vega");
+var author = '<div style="position: fixed;bottom: 0;right: 20px;box-shadow: 0 4px 8px rgba(0,0,0,.05);border-radius: 3px 3px 0 0;font-size: 12px;padding: 5px 10px;"><a style="text-decoration: none; color: maroon" href="https://facebook.com/cyanneheart">@cyanneheart</a></div>';
+
+const body = document.querySelector('body');
+const authorElement = document.createElement('div');
+authorElement.innerHTML = author;
+body.appendChild(authorElement);
