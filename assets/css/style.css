@@ -232,7 +232,6 @@ nav ul.sub-menu li:hover {
   padding: 10px 10px;
 }
 
-/* Pagination Styles */
 .pagination {
   list-style: none;
   display: flex;
@@ -244,7 +243,6 @@ nav ul.sub-menu li:hover {
   text-decoration: none;
   color: var(--yellow);
   background-color: var(--green);
-  border: 1px solid var(--yellow);
   padding: 5px 10px;
   margin: 5px;
   border-radius: 5px;

@@ -1,10 +1,10 @@
 /**
  * Copyright (c) 2023 Cyanne Justin Vega
 */
-const announcementsToDisplay = 2;
+const announcementsToDisplay = 3;
 var bitress = {
     URI: {
-        announcement_api: "announcement_api/data.json"
+        announcement_api: "ispsc-api/announcements.php"
     },
     quotes: [
             "The road to success and the road to failure are almost exactly the same.",
@@ -32,12 +32,12 @@ bitress.Utils.fetchAnnouncements = function () {
         .then(data => {
             const announcements = data;
 
-            announcements.sort((a, b) => new Date(b.date) - new Date(a.date));
+            announcements.sort((a, b) => new Date(b.announcement_date) - new Date(a.announcement_date));
 
             const latestAnnouncements = announcements.slice(0, announcementsToDisplay);
             var placeholder = document.getElementById("announcements");
             latestAnnouncements.forEach(e => {
-                placeholder.innerHTML += `<li>${e.date}: ${e.content}</li>`;
+                placeholder.innerHTML += `<li style="margin-bottom: 8px">${bitress.Utils.formatDate(e.announcement_date)} : ${e.announcement_content}</li>`;
             });
         })
         .catch(error => {
@@ -83,6 +83,22 @@ bitress.Utils.clock = function () {
     pstTime.textContent = formattedTime;
 };
 
+
+bitress.Utils.formatDate = function(inputDateString) {
+    var date = new Date(inputDateString);
+
+    var daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+    var dayOfWeek = daysOfWeek[date.getDay()];
+    var day = date.getDate();
+    var month = months[date.getMonth()];
+    var year = date.getFullYear();
+
+    return  month + " " + day + ", " + year;
+}
+
+
 const accordionItems = document.querySelectorAll('.accordion-item');
 accordionItems.forEach(item => {
     const header = item.querySelector('.accordion-header');
@@ -119,7 +135,7 @@ function nextSlide() {
 setInterval(nextSlide, 5000);
 
 console.log("Made with <3 by Cyanne Justin Vega");
-var author = '<div style="position: fixed;bottom: 0;right: 20px;box-shadow: 0 4px 8px rgba(0,0,0,.05);border-radius: 3px 3px 0 0;font-size: 12px;padding: 5px 10px;"><a style="text-decoration: none; color: maroon" href="https://facebook.com/cyanneheart">@cyanneheart</a></div>';
+var author = '<div style="position: fixed;bottom: 0;right: 20px;box-shadow: 0 4px 8px rgba(0,0,0,.05);border-radius: 3px 3px 0 0;font-size: 12px; opacity: 0.5; padding: 5px 10px;">Created by<a style="text-decoration: none; color: maroon" target="_blank" href="https://www.github.com/bitress"> Cyanne Justin Vega</a></div>';
 
 const body = document.querySelector('body');
 const authorElement = document.createElement('div');
