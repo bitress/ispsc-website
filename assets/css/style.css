@@ -6,10 +6,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 @import url('fonts/CenturyGothic/font.css');
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
-@import url('fonts/CenturyGothic/font.css');
 
 :root {
   --primary: #007BFF;
@@ -189,6 +185,84 @@ nav ul.sub-menu li:hover {
 }
 
 
+.archive a{
+  list-style: none;
+  display: block;
+  text-decoration: none;
+  padding: 8px 10px;
+  color: var(--yellow) !important;
+  background-color: var(--dark-green) !important;
+}
+
+
+
+.year {
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.toggle-button {
+  cursor: pointer;
+  float: right;          
+  margin-right: 10px;  
+}
+
+
+.months {
+  margin-left: 14px;
+  list-style: disc;
+  display: none;
+}
+
+.count {
+  font-weight: 100;
+  color: var(--yellow);
+}
+
+
+
+.months li {
+  background-color: var(--dark-green);
+  color: white;
+  list-style: none;
+  margin-top: 5px;
+  border-bottom: 1px dotted rgba(0,0,0,.3);
+  font-size: 15px;
+  position: relative;
+  padding: 10px 10px;
+}
+
+/* Pagination Styles */
+.pagination {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.page-link {
+  text-decoration: none;
+  color: var(--yellow);
+  background-color: var(--green);
+  border: 1px solid var(--yellow);
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.page-link:hover {
+  background-color: var(--dark-green);
+}
+
+.page-link.active {
+  background-color: var(--dark-green);
+}
+
+
+.m-4 {
+  margin: 20px;
+}
 
 .carousel {
   margin: 0 auto;
